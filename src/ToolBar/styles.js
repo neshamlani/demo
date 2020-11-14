@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     boxShadow: 'none',
-    fontFamily: 'monospace',
-    fontSize: 14,
+    fontFamily: theme.typography.fontFamily,
+    fontSize: 18,
     fontWeight: 'bold'
   }
 }));

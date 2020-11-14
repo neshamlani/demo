@@ -14,6 +14,9 @@ const theme = createMuiTheme({
       primary: '#FFFFFF',
       secondary: '#000000'
     }
+  },
+  typography: {
+    fontFamily: 'courier new'
   }
 });
 

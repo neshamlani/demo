@@ -6,7 +6,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.text.primary,
     flexDirection: 'column',
-    margin: 'auto'
+    margin: 'auto',
+    padding: 20
   },
 }));
 

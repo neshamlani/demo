@@ -28,12 +28,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.down('xs')]: {
-      paddingLeft: 0,
-      paddingTop: 20,
+      padding: '20px 0 0 0'
     }
   },
   name: {
-    fontFamily: 'monospace',
+    fontFamily: theme.typography.fontFamily,
     fontSize: 64,
     color: theme.palette.text.primary,
     fontWeight: 'bold',
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   jd: {
-    fontFamily: 'monospace',
+    fontFamily: theme.typography.fontFamily,
     fontSize: 32,
     color: theme.palette.text.primary,
     flexDirection: 'column',

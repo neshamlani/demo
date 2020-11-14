@@ -7,7 +7,8 @@ import Button from '@material-ui/core/Button';
 import useStyles from './styles';
 import {
   handleProfileRef,
-  handleContactRef
+  handleContactRef,
+  handleEducationRef
 } from '../refs';
 
 
@@ -43,6 +44,10 @@ const Toolbar = (props) => {
                   variant='contained'
                   className={classes.btn}
                   color='primary'
+                  onClick={() => {
+                    handleEducationRef()
+                    props.toggle()
+                  }}
                 >
                   Education</Button>
 
@@ -115,6 +120,7 @@ const Toolbar = (props) => {
               variant='contained'
               className={classes.btn}
               color='primary'
+              onClick={handleEducationRef}
             >
               Education</Button>
 

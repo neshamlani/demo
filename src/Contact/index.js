@@ -6,11 +6,14 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import useStyles from './styles';
-import { CONTACT_REF } from '../refs'
+import { CONTACT_REF } from '../refs';
+import Spinner from '../Spinner'
 
 const Contact = () => {
   const [info, setInfo] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    setIsLoading(true);
     axios.get('https://portfolio-groot.firebaseio.com/contact.json')
       .then(resp => {
         let data = [];
@@ -21,24 +24,32 @@ const Contact = () => {
           })
         }
         setInfo(data);
+        setIsLoading(false);
       })
-      .catch(err => alert(err))
+      .catch(err => {
+        alert(err);
+        setIsLoading(false);
+      })
   }, [])
 
   const classes = useStyles();
   return (
-    <div className={classes.contactWrapper} ref={CONTACT_REF}>
+    <div ref={CONTACT_REF}>
       <div className={classes.contactTitle}>Contact</div>
-      <TableContainer>
+      <TableContainer className={classes.tableWrapper}>
         <Table>
           <TableBody>
             {
-              info.map(val =>
-                <TableRow key={val.id}>
-                  <TableCell className={classes.tableCell}>{val.key}</TableCell>
-                  <TableCell className={classes.tableCell}>{val.value}</TableCell>
-                </TableRow>
-              )
+              isLoading
+                ?
+                <Spinner />
+                :
+                info.map(val =>
+                  <TableRow key={val.id}>
+                    <TableCell className={classes.tableCell}>{val.key}</TableCell>
+                    <TableCell className={classes.tableCell}>{val.value}</TableCell>
+                  </TableRow>
+                )
             }
           </TableBody>
         </Table>

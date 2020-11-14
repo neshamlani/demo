@@ -5,20 +5,21 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.text.primary,
+    padding: 20,
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       flexDirection: 'column',
-      margin: 'auto'
+      margin: 'auto',
     }
   },
   leftWrapper: {
-    width: '40vw',
+    width: '60vw',
     [theme.breakpoints.down('sm')]: {
       width: 'auto'
     }
   },
   rightWrapper: {
-    width: '60vw',
+    width: '40vw',
     [theme.breakpoints.down('sm')]: {
       width: 'auto'
     }
