@@ -2,9 +2,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   mainWrapper: {
-    width: '80vw',
+    width: 'auto',
     height: '100vh',
-    backgroundColor: theme.palette.primary.light
+    backgroundColor: theme.palette.primary.main
+  },
+  toolBar: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'space-between'
+  },
+  btn: {
+    boxShadow: 'none'
   }
 }));
 

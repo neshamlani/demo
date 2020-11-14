@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MediaQuery from 'react-responsive';
-import Desktop from './Desktop';
-import Mobile from './Mobile'
+import ToolBar from '../ToolBar';
+import Drawer from '../Drawer';
 
 const Header = () => {
-
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <div>
       <MediaQuery maxWidth={600}>
-        <Mobile />
+        <ToolBar open={() => setIsDrawerOpen(!isDrawerOpen)} />
+        <Drawer open={isDrawerOpen} toggle={() => setIsDrawerOpen(!isDrawerOpen)} />
       </MediaQuery>
       <MediaQuery minWidth={600}>
-        <Desktop />
+        <ToolBar />
       </MediaQuery>
     </div>
   )

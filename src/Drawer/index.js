@@ -1,6 +1,6 @@
 import React from 'react';
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
+import Drawer from '@material-ui/core/SwipeableDrawer';
+import ToolBar from '../ToolBar'
 import useStyles from './styles';
 
 const SideBar = (props) => {
@@ -8,10 +8,12 @@ const SideBar = (props) => {
   return (
     <Drawer
       open={props.open}
-      onClose={props.close}
+      onClose={props.toggle}
+      swipeAreaWidth={200}
+      onOpen={props.toggle}
     >
       <div className={classes.mainWrapper}>
-        hello
+        <ToolBar toggle={props.toggle} mobile />
       </div>
     </Drawer>
   )
