@@ -21,7 +21,8 @@ const useStyles = makeStyles(theme => ({
   rightWrapper: {
     width: '40vw',
     [theme.breakpoints.down('sm')]: {
-      width: 'auto'
+      width: 'auto',
+      marginTop: 20
     }
   }
 }));

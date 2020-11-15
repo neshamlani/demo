@@ -8,7 +8,8 @@ import useStyles from './styles';
 import {
   handleProfileRef,
   handleContactRef,
-  handleEducationRef
+  handleEducationRef,
+  handleSkillRef
 } from '../refs';
 
 
@@ -21,7 +22,7 @@ const Toolbar = (props) => {
           props.mobile
             ?
             <AppBar position='static'>
-              <ToolBar className={classes.toolBar}>
+              <ToolBar className={classes.toolBarMobile}>
                 <Button
                   variant='contained'
                   className={classes.btn}
@@ -31,7 +32,7 @@ const Toolbar = (props) => {
                     props.toggle()
                   }}
                 >
-                  profile</Button>
+                  Objective</Button>
 
                 <Button
                   variant='contained'
@@ -55,8 +56,19 @@ const Toolbar = (props) => {
                   variant='contained'
                   className={classes.btn}
                   color='primary'
+                  onClick={() => {
+                    handleSkillRef();
+                    props.toggle();
+                  }}
                 >
                   Skills</Button>
+
+                <Button
+                  variant='contained'
+                  className={classes.btn}
+                  color='primary'
+                >
+                  Certificates</Button>
 
                 <Button
                   variant='contained'
@@ -68,13 +80,6 @@ const Toolbar = (props) => {
                   }}
                 >
                   Contact</Button>
-
-                <Button
-                  variant='contained'
-                  className={classes.btn}
-                  color='primary'
-                >
-                  Certificates</Button>
 
                 <Button
                   variant='contained'
@@ -107,7 +112,7 @@ const Toolbar = (props) => {
               color='primary'
               onClick={handleProfileRef}
             >
-              profile</Button>
+              Objective</Button>
 
             <Button
               variant='contained'
@@ -128,8 +133,16 @@ const Toolbar = (props) => {
               variant='contained'
               className={classes.btn}
               color='primary'
+              onClick={handleSkillRef}
             >
               Skills</Button>
+
+            <Button
+              variant='contained'
+              className={classes.btn}
+              color='primary'
+            >
+              Certificates</Button>
 
             <Button
               variant='contained'
@@ -138,13 +151,6 @@ const Toolbar = (props) => {
               onClick={handleContactRef}
             >
               Contact</Button>
-
-            <Button
-              variant='contained'
-              className={classes.btn}
-              color='primary'
-            >
-              Certificates</Button>
 
             <Button
               variant='contained'

@@ -23,7 +23,7 @@ const Profile = () => {
   const classes = useStyles();
   return (
     <div ref={PROFILE_REF}>
-      <div className={classes.profileTitle}>Profile</div>
+      <div className={classes.profileTitle}>Objective</div>
       <div className={classes.profileDiscription}>
         {
           isLoading

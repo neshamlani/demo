@@ -5,12 +5,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     display: 'flex',
     justifyContent: 'space-between',
-    [theme.breakpoints.down('xs')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start'
+    [theme.breakpoints.down('sm')]: {
+      flexWrap: 'wrap',
     }
+  },
+  toolBarMobile: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    height: '100vh',
   },
   btn: {
     boxShadow: 'none',

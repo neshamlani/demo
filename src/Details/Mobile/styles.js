@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.primary,
     flexDirection: 'column',
     margin: 'auto',
-    padding: 20
+    padding: 20,
   },
 }));
 

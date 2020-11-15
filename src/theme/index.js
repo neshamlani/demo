@@ -16,7 +16,9 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: 'courier new'
+    fontFamily: 'courier new',
+    fontSize: 22,
+    fontWeightBold: 'bold'
   }
 });
 

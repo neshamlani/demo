@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   educationTitle: {
-    fontSize: 22,
+    fontSize: theme.typography.fontSize,
     fontFamily: theme.typography.fontFamily,
     fontWeight: 'bold'
   },

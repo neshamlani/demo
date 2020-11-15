@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   imgs: {
     width: 200,
     height: 200,
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
   textWrapper: {
     paddingLeft: 50,

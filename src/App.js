@@ -3,11 +3,12 @@ import MediaQuery from 'react-responsive';
 import Header from './Header';
 import Banner from './Banner';
 import Details from './Details';
+import './App.css';
 
 const App = () => {
 
   return (
-    <div>
+    <div className='root'>
       <Banner />
       <Header />
       <MediaQuery maxWidth={600}>

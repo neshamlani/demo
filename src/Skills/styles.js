@@ -1,19 +1,20 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
-  profileTitle: {
-    fontSize: 22,
+  mainWrapper: {
+    marginTop: 20,
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  title: {
     fontFamily: theme.typography.fontFamily,
+    fontSize: theme.typography.fontSize,
     fontWeight: 'bold'
   },
-  profileDiscription: {
-    paddingLeft: 20,
-    whiteSpace: 'break-spaces',
-    fontSize: 18,
-    fontFamily: theme.typography.fontFamily,
-    marginTop: 10,
+  gridContainer: {
+    padding: '20px 0px 0px 20px',
     [theme.breakpoints.down('xs')]:{
-      padding: '0'
+      padding:'20px 0 0'
     }
   }
 }));

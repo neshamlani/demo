@@ -3,7 +3,7 @@ import useStyles from './styles';
 import Profile from '../../Profile';
 import Contact from '../../Contact';
 import Education from '../../Education';
-
+import Skills from '../../Skills';
 const Desktop = () => {
   const classes = useStyles();
   return (
@@ -14,6 +14,7 @@ const Desktop = () => {
       </div>
       <div className={classes.rightWrapper}>
         <Contact />
+        <Skills />
       </div>
     </div>
   )
