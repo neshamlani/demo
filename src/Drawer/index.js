@@ -9,7 +9,7 @@ const SideBar = (props) => {
     <Drawer
       open={props.open}
       onClose={props.toggle}
-      swipeAreaWidth={200}
+      swipeAreaWidth={50}
       onOpen={props.toggle}
     >
       <div className={classes.mainWrapper}>
