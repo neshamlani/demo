@@ -38,3 +38,21 @@ export const handleSkillRef = () => {
     inline: "start"
   })
 };
+
+export const CERTIFICATE_REF = React.createRef();
+export const handleCertificateRef = () => {
+  CERTIFICATE_REF.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "start"
+  })
+};
+
+export const LINKS_REF = React.createRef();
+export const handleLinkRef = () => {
+  LINKS_REF.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "start"
+  })
+}

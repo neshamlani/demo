@@ -9,7 +9,9 @@ import {
   handleProfileRef,
   handleContactRef,
   handleEducationRef,
-  handleSkillRef
+  handleSkillRef,
+  handleCertificateRef,
+  handleLinkRef
 } from '../refs';
 
 
@@ -67,6 +69,10 @@ const Toolbar = (props) => {
                   variant='contained'
                   className={classes.btn}
                   color='primary'
+                  onClick={() => {
+                    handleCertificateRef();
+                    props.toggle();
+                  }}
                 >
                   Certificates</Button>
 
@@ -85,6 +91,10 @@ const Toolbar = (props) => {
                   variant='contained'
                   className={classes.btn}
                   color='primary'
+                  onClick={() => {
+                    handleLinkRef()
+                    props.toggle()
+                  }}
                 >
                   Links</Button>
 
@@ -141,6 +151,7 @@ const Toolbar = (props) => {
               variant='contained'
               className={classes.btn}
               color='primary'
+              onClick={handleCertificateRef}
             >
               Certificates</Button>
 
@@ -156,6 +167,7 @@ const Toolbar = (props) => {
               variant='contained'
               className={classes.btn}
               color='primary'
+              onClick={handleLinkRef}
             >
               Links</Button>
 
