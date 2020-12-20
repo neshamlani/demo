@@ -7,10 +7,6 @@ const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <div>
-      <MediaQuery maxWidth={600}>
-        <ToolBar open={() => setIsDrawerOpen(!isDrawerOpen)} />
-        <Drawer open={isDrawerOpen} toggle={() => setIsDrawerOpen(!isDrawerOpen)} />
-      </MediaQuery>
       <MediaQuery minWidth={600}>
         <ToolBar />
       </MediaQuery>
