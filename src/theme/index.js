@@ -1,25 +1,21 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: '#8e8e8e',
-      main: '#616161',
-      dark: '#373737'
-    },
-    secondary: {
-      main: '#48494B',
-    },
-    text: {
-      primary: '#FFFFFF',
-      secondary: '#000000'
-    }
+const theme = {
+  color: {
+    background: '#EDE8E2',
+    title: '#b69005',
+    description: '#1F252B',
+    buttonBackground: '#1D65AA'
   },
-  typography: {
-    fontFamily: 'courier new',
-    fontSize: 22,
-    fontWeightBold: 'bold'
+  font: 'Ubuntu',
+  fontSizes: {
+    small: '20px',
+    medium: '24px',
+    large: '28px'
+  },
+  fontWeight: {
+    light: '300',
+    medium: '500',
+    strong: '900'
   }
-});
+};
 
 export default theme;
