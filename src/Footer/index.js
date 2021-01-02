@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <Link href='https://www.github.com/neshamlani' target='_blank'>
-        <img src={github} width='32' height='32' />
+        <Img src={github} />
       </Link>
       <Link href='https://www.linkedin.com/in/neshamlani1970' target='_blank'>
-        <img src={linkedin} width='32' height='32' />
+        <Img src={linkedin} />
       </Link>
       <Link href='https://www.twitter.com/groot_1970' target='_blank'>
-        <img src={twitter} width='32' height='32' />
+        <Img src={twitter} />
       </Link>
     </FooterWrapper>
   )
@@ -25,6 +25,7 @@ const FooterWrapper = styled.div`
   bottom:0;
   display:flex;
   justify-content:center;
+  align-items:center;
   padding:10px;
   background:${({ theme }) => theme.color.background};
   border-top:1px solid ${({ theme }) => theme.color.description};
@@ -35,6 +36,18 @@ const Link = styled.a`
   padding:0;
   background:transparent;
   margin:0 10px;
+`;
+
+const Img = styled.img`
+  width:28px;
+  height:28px;
+  transition-property:width height;
+  transition-duration:0.3s;
+  transition-timing-function:linear;
+  &:hover{
+    width:40px;
+    height:40px;
+  }
 `;
 
 export default Footer;

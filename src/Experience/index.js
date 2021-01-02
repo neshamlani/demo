@@ -1,8 +1,9 @@
 import React from 'react';
+import { Container } from '../Custom_Component';
 
-const Experience =()=>{
-  return(
-    <div>Nesh Experience</div>
+const Experience = () => {
+  return (
+    <Container>Nesh Experience</Container>
   )
 };
 
