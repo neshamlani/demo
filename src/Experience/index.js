@@ -3,7 +3,7 @@ import { Container } from '../Custom_Component';
 
 const Experience = () => {
   return (
-    <Container>Nesh Experience</Container>
+    <Container>Comming Soon</Container>
   )
 };
 

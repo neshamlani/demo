@@ -42,7 +42,7 @@ const Img = styled.img`
   width:28px;
   height:28px;
   transition-property:width height;
-  transition-duration:0.3s;
+  transition-duration:0.2s;
   transition-timing-function:linear;
   &:hover{
     width:40px;

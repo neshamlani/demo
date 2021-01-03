@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Title, Description } from '../Custom_Component';
+import { Container, Title, Description, SubTitle } from '../Custom_Component';
 import profile from '../assetes/me.jpg';
 
 const About = () => {
@@ -11,6 +11,7 @@ const About = () => {
     <Container>
       <Img src={profile} alt='Photo' />
       <Title>Nesh Amlani</Title>
+      <SubTitle>FrontEnd Developer</SubTitle>
       <Description>{desp}</Description>
     </Container>
   )
