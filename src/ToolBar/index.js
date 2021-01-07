@@ -3,32 +3,26 @@ import styled from 'styled-components';
 import { Title } from '../Custom_Component';
 import greater from '../assetes/greater.png';
 import less from '../assetes/less.png';
+import { useMediaQuery } from 'react-responsive';
 
-const ToolBar = (props) => {
-  const [steps, setSteps] = useState(['About Me', 'Experience', 'Education', 'Skills', 'Certificate']);
-  const [progess, setProgess] = useState([20, 40, 60, 80, 100]);
-  const [counter, setCounter] = useState(0);
-
-  const increment = () => {
-    if (counter >= 4) return;
-    setCounter(counter + 1);
-    props.set(counter + 1);
-  }
-
-  const decrement = () => {
-    if (counter === 0) return;
-    setCounter(counter - 1);
-    props.set(counter - 1);
-  }
-
+const ToolBar = ({ decrement, increment, counter, steps, progess }) => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width:600px)'
+  });
   return (
     <Toolbar>
-      <Img src={less} onClick={decrement} hide={counter === 0 ? 1 : 0} />
+      {
+        isDesktop &&
+        <Img src={less} onClick={decrement} hide={counter === 0 ? 1 : 0} />
+      }
       <Heading>
         <Title heading={1}>{steps[counter]}</Title>
         <ProgessBar progess={progess[counter]} />
       </Heading>
-      <Img src={greater} onClick={increment} hide={counter >= 4 ? 1 : 0} />
+      {
+        isDesktop &&
+        <Img src={greater} onClick={increment} hide={counter >= 4 ? 1 : 0} />
+      }
     </Toolbar>
   )
 };

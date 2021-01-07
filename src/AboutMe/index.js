@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Title, Description, SubTitle } from '../Custom_Component';
+import { 
+  Container, 
+  Title, 
+  Description, 
+  SubTitle } from '../Custom_Component';
 import profile from '../assetes/me.jpg';
 
 const About = () => {

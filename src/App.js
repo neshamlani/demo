@@ -9,10 +9,26 @@ import Education from './Education';
 import Loader from './assetes/setting.png';
 import Skills from './Skills';
 import Certificate from './Certificate';
+import Swipe from 'react-easy-swipe';
 
 const App = () => {
   const [step, setStep] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const steps = ['About Me', 'Experience', 'Education', 'Skills', 'Achievements'];
+  const progress = [20, 40, 60, 80, 100];
+  const [counter, setCounter] = useState(0);
+
+  const increment = () => {
+    if (counter >= 4) return;
+    setCounter(counter + 1);
+    setStep(counter + 1);
+  }
+
+  const decrement = () => {
+    if (counter === 0) return;
+    setCounter(counter - 1);
+    setStep(counter - 1);
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,8 +69,24 @@ const App = () => {
           </Loading>
           :
           <Div>
-            <ToolBar set={setStep} />
-            {dynamicComponent}
+            <ToolBar
+              increment={increment}
+              decrement={decrement}
+              steps={steps}
+              progess={progress}
+              counter={counter}
+            />
+            <MediaQuery maxWidth={600}>
+              <Swipe
+                onSwipeLeft={increment}
+                onSwipeRight={decrement}
+                tolerance={100}>
+                {dynamicComponent}
+              </Swipe>
+            </MediaQuery>
+            <MediaQuery minWidth={600}>
+              {dynamicComponent}
+            </MediaQuery>
             <Footer />
           </Div>
       }

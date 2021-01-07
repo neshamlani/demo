@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import github from '../assetes/github.png';
 import linkedin from '../assetes/linkedin.png';
 import twitter from '../assetes/twitter.png';
+import discord from '../assetes/discord.png';
 
 const Footer = () => {
   return (
@@ -15,6 +16,9 @@ const Footer = () => {
       </Link>
       <Link href='https://www.twitter.com/groot_1970' target='_blank'>
         <Img src={twitter} />
+      </Link>
+      <Link href='https://www.discord.com/users/710425727149015071' target='_blank'>
+        <Img src={discord} />
       </Link>
     </FooterWrapper>
   )
