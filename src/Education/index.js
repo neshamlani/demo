@@ -97,7 +97,7 @@ const DetailsWrapper = styled.div`
   }
 `;
 
-const LeftWrapper = styled.div`
+export const LeftWrapper = styled.div`
   display:flex;
   flex-direction:column;
   width:60%;
@@ -106,7 +106,7 @@ const LeftWrapper = styled.div`
   }
 `;
 
-const RightWrapper = styled.div`
+export const RightWrapper = styled.div`
   display:flex;
   flex-direction:column;
   width:40%;

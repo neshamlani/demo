@@ -54,6 +54,12 @@ export const Container = styled.div`
   animation-duration:1s;
   animation-timing-function:linear;
 
+  @media(max-width:600px){
+    padding:30px 10px 60px;
+    justify-content:flex-start;
+    min-height:75vh;
+  }
+
   @keyframes fade{
     0%{
       opacity:0;

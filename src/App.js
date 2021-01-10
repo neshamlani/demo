@@ -10,10 +10,12 @@ import Loader from './assetes/setting.png';
 import Skills from './Skills';
 import Certificate from './Certificate';
 import Swipe from 'react-easy-swipe';
+import { SubTitle } from './Custom_Component';
 
 const App = () => {
   const [step, setStep] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [isPopupOpen, setIsPopupOpen] = useState(true);
   const steps = ['About Me', 'Experience', 'Education', 'Skills', 'Achievements'];
   const progress = [20, 40, 60, 80, 100];
   const [counter, setCounter] = useState(0);
@@ -33,8 +35,11 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000)
-  }, [isLoading]);
+    }, 2000);
+    setTimeout(() => {
+      setIsPopupOpen(false);
+    }, 3000);
+  }, [isLoading, isPopupOpen]);
 
   let dynamicComponent;
 
@@ -81,6 +86,9 @@ const App = () => {
                 onSwipeLeft={increment}
                 onSwipeRight={decrement}
                 tolerance={100}>
+                <Popup isOpen={isPopupOpen}>
+                  <SubTitle>Swipe To Navigate</SubTitle>
+                </Popup>
                 {dynamicComponent}
               </Swipe>
             </MediaQuery>
@@ -98,6 +106,18 @@ const Div = styled.div`
   min-height:100vh;
   height:auto;
   background:${({ theme }) => theme.color.background};
+`;
+
+const Popup = styled.div`
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  margin:auto;
+  padding:40px 50px 50px;
+  z-index:${({ isOpen }) => isOpen ? '999' : '-999'};
+  background:${({ theme }) => theme.color.background};
+  border:2px solid ${({ theme }) => theme.color.buttonBackground};
 `;
 
 const Loading = styled.div`
